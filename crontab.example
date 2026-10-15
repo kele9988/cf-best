@@ -1,0 +1,8 @@
+# 每天 6 个时段测速（slot 0/4/8/12/16），20 点附带 --day 归档当天
+# 把 /path/to/cf_best 换成你的实际目录（需与 docker run -v 挂载一致）
+0 0 * * * docker run --rm -v /path/to/cf_best:/app cf-best python3 -u /app/cf_best.py slot 0 >> /app/run.log 2>&1
+0 4 * * * docker run --rm -v /path/to/cf_best:/app cf-best python3 -u /app/cf_best.py slot 4 >> /app/run.log 2>&1
+0 8 * * * docker run --rm -v /path/to/cf_best:/app cf-best python3 -u /app/cf_best.py slot 8 >> /app/run.log 2>&1
+0 12 * * * docker run --rm -v /path/to/cf_best:/app cf-best python3 -u /app/cf_best.py slot 12 >> /app/run.log 2>&1
+0 16 * * * docker run --rm -v /path/to/cf_best:/app cf-best python3 -u /app/cf_best.py slot 16 >> /app/run.log 2>&1
+0 20 * * * docker run --rm -v /path/to/cf_best:/app cf-best python3 -u /app/cf_best.py slot 20 --day >> /app/run.log 2>&1

@@ -1,0 +1,3 @@
+# 本项目仅使用 Python 标准库，无任何第三方依赖。
+# 仅需 Python 3.8+（推荐 3.11+）。
+# 如使用 Docker，镜像已内置 python:3.11-alpine + curl，无需安装任何包。

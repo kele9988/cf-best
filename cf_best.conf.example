@@ -1,0 +1,26 @@
+# ============================================================
+# cf_best 配置文件示例 —— 复制为 cf_best.conf 后填入你自己的值
+# 脚本只读取 KEY=VALUE 格式，# 开头为注释
+# ============================================================
+
+# ---- GitHub 上传（把优选结果同步到公开仓库，供下游脚本/首页拉取）----
+owner=你的GitHub用户名
+repo=cf-best
+# 需要一个具备 contents:write 权限的 Personal Access Token
+token=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# ---- Cloudflare DNS 自动更新（可选）----
+# 不需要自动改 DNS 就设为 0
+cf_dns_enable=0
+# Cloudflare API Token（需 Zone:DNS:Edit 权限）
+cf_token=你的Cloudflare_API_Token
+# 你的域名（脚本会查该域名的 zone id）
+cf_zone=example.com
+# 每个地区最多写入的 A 记录数
+cf_per_region=20
+
+# ---- 可选高级项 ----
+# 多节点部署时，用不同 remote_dir 区分上传路径，避免互相覆盖：
+# remote_dir=node-a
+# 跨期聚合最少稳定期数（默认 4：至少过半期稳定达标才保留）
+# min_occurs=4

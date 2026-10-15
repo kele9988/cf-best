@@ -1,0 +1,26 @@
+# 运行时配置（含密钥，切勿提交）
+cf_best.conf
+cf_best.conf.bak
+
+# 运行锁 / 日志 / 状态
+.run.lock
+*.lock
+*.log
+run.log
+
+# 动态生成的测速数据产物
+candidates*.txt
+region.txt
+pool_stats.json
+state.json
+timefiles/
+dayfiles/
+best_backup/
+best.txt
+topbest.txt
+24hour.txt
+web.txt
+
+# Python
+__pycache__/
+*.pyc
